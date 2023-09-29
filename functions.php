@@ -7,9 +7,9 @@
  * @package lionfish
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'LIONFISH_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'LIONFISH_VERSION', '2.0.0' );
 }
 
 /**
@@ -138,10 +138,10 @@ add_action( 'widgets_init', 'lionfish_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lionfish_scripts() {
-	wp_enqueue_style( 'lionfish-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'lionfish-style', get_stylesheet_uri(), array(), LIONFISH_VERSION );
 	wp_style_add_data( 'lionfish-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'lionfish-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'lionfish-navigation', get_template_directory_uri() . '/js/navigation.js', array(), LIONFISH_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

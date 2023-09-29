@@ -56,6 +56,6 @@ function lionfish_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function lionfish_customize_preview_js() {
-	wp_enqueue_script( 'lionfish-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'lionfish-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), LIONFISH_VERSION, true );
 }
 add_action( 'customize_preview_init', 'lionfish_customize_preview_js' );
